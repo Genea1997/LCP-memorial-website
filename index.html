@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LCP Memorial | Community NGO</title>
+    <meta
+      name="description"
+      content="LCP Memorial supports education, care, and community development through transparent giving and shared action."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <a class="brand" href="#home">
+            <span class="brand-mark">LCP</span>
+            <span class="brand-text">LCP Memorial</span>
+          </a>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#donate">Donate</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#updates">Updates</a>
+          </div>
+        </nav>
+
+        <section class="hero-grid" id="home">
+          <div class="hero-copy">
+            <p class="eyebrow">Serving with dignity, memory, and action</p>
+            <h1>Building hopeful futures through LCP Memorial.</h1>
+            <p class="hero-text">
+              We support families, education, health outreach, and local relief
+              efforts with transparent fundraising and community-led programs.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#donate">Support Our Work</a>
+              <a class="button button-secondary" href="#updates">See Roadmap</a>
+            </div>
+            <div class="impact-strip">
+              <article>
+                <strong>1,200+</strong>
+                <span>Lives reached</span>
+              </article>
+              <article>
+                <strong>28</strong>
+                <span>Volunteer partners</span>
+              </article>
+              <article>
+                <strong>100%</strong>
+                <span>Visible campaign updates</span>
+              </article>
+            </div>
+          </div>
+
+          <aside class="hero-card">
+            <p class="card-kicker">Current Focus</p>
+            <h2>Scholarships, food kits, and urgent medical support</h2>
+            <p>
+              Every contribution helps LCP Memorial respond faster to families
+              who need education support, essentials, and care.
+            </p>
+            <ul class="hero-list">
+              <li>Transparent donation tracking</li>
+              <li>Monthly progress notifications</li>
+              <li>Community photo stories and milestones</li>
+            </ul>
+          </aside>
+        </section>
+      </header>
+
+      <main>
+        <section class="section two-column" id="about">
+          <div>
+            <p class="section-label">Who We Are</p>
+            <h2>A memorial-led NGO rooted in compassion and continuity.</h2>
+          </div>
+          <p class="section-copy">
+            LCP Memorial honors a legacy of service by funding meaningful
+            programs, uplifting vulnerable families, and sharing visible updates
+            on what support makes possible.
+          </p>
+        </section>
+
+        <section class="section dashboard-grid" id="donate">
+          <article class="panel donation-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="section-label">Payment Gateway</p>
+                <h2>Receive funds securely</h2>
+              </div>
+              <span class="pill">Gateway-ready</span>
+            </div>
+
+            <form id="donation-form" class="donation-form">
+              <label>
+                Full Name
+                <input type="text" id="donor-name" placeholder="Your name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" id="donor-email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                Donation Amount (INR)
+                <input
+                  type="number"
+                  id="donation-amount"
+                  placeholder="2500"
+                  min="100"
+                  step="100"
+                  required
+                />
+              </label>
+
+              <div class="amount-pills">
+                <button class="chip" type="button" data-amount="1000">INR 1,000</button>
+                <button class="chip" type="button" data-amount="2500">INR 2,500</button>
+                <button class="chip" type="button" data-amount="5000">INR 5,000</button>
+              </div>
+
+              <button class="button button-primary wide" type="submit">
+                Proceed to Payment
+              </button>
+              <p class="fine-print">
+                Live payments are created on the backend. Add Razorpay keys in
+                <code>.env</code> to accept real donations.
+              </p>
+            </form>
+            <div id="donation-status" class="status-box" aria-live="polite"></div>
+          </article>
+
+          <article class="panel trust-panel">
+            <p class="section-label">Funding Priorities</p>
+            <h2>Where support goes next</h2>
+            <div class="priority-list">
+              <div>
+                <strong>Education Fund</strong>
+                <span>School fees, books, digital access</span>
+              </div>
+              <div>
+                <strong>Medical Relief</strong>
+                <span>Emergency treatment and follow-up care</span>
+              </div>
+              <div>
+                <strong>Nutrition Support</strong>
+                <span>Food kits and seasonal essentials</span>
+              </div>
+            </div>
+            <div class="bank-box">
+              <p>Alternative transfer option</p>
+              <strong>LCP Memorial Trust</strong>
+              <span>A/C: 1234567890</span>
+              <span>IFSC: LCPM0001234</span>
+            </div>
+            <div class="donation-log">
+              <p class="section-label">Recent Donations</p>
+              <div id="donation-list" class="donation-list"></div>
+            </div>
+          </article>
+        </section>
+
+        <section class="section">
+          <article class="panel admin-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="section-label">Admin Access</p>
+                <h2>Protect uploads and notifications</h2>
+              </div>
+              <span class="pill">Optional</span>
+            </div>
+            <form id="admin-form" class="notification-form">
+              <label>
+                Admin Key
+                <input
+                  type="password"
+                  id="admin-key"
+                  placeholder="Enter admin key for publishing"
+                />
+              </label>
+              <button class="button button-secondary" type="submit">Save Admin Key</button>
+            </form>
+            <p class="fine-print">
+              When <code>ADMIN_KEY</code> is set on the server, publishing
+              notifications and uploading or deleting gallery photos will require it.
+            </p>
+          </article>
+        </section>
+
+        <section class="section dashboard-grid" id="gallery">
+          <article class="panel gallery-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="section-label">Gallery</p>
+                <h2>Upload and share community moments</h2>
+              </div>
+              <span class="pill">Browser storage</span>
+            </div>
+
+            <form id="gallery-form" class="upload-form">
+              <label>
+                Caption
+                <input
+                  type="text"
+                  id="gallery-caption"
+                  placeholder="Medical camp in April"
+                  required
+                />
+              </label>
+              <label class="file-input">
+                <span>Select Photo</span>
+                <input type="file" id="gallery-image" accept="image/*" required />
+              </label>
+              <button class="button button-secondary" type="submit">Upload Photo</button>
+            </form>
+
+            <div id="gallery-grid" class="gallery-grid"></div>
+          </article>
+
+          <article class="panel updates-panel" id="updates">
+            <div class="panel-heading">
+              <div>
+                <p class="section-label">Notification Center</p>
+                <h2>Important updates and roadmap</h2>
+              </div>
+              <span class="pill">Live board</span>
+            </div>
+
+            <div id="notification-list" class="notification-list"></div>
+
+            <form id="notification-form" class="notification-form">
+              <label>
+                Add Notification
+                <input
+                  type="text"
+                  id="notification-input"
+                  placeholder="Volunteer orientation this Saturday at 10 AM"
+                  required
+                />
+              </label>
+              <button class="button button-secondary" type="submit">Publish Note</button>
+            </form>
+
+            <div class="roadmap">
+              <h3>Upcoming Roadmap</h3>
+              <div id="roadmap-list" class="roadmap-list"></div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <template id="gallery-card-template">
+      <article class="gallery-card">
+        <img alt="" />
+        <div class="gallery-card-body">
+          <p class="gallery-caption"></p>
+          <button class="text-button" type="button">Remove</button>
+        </div>
+      </article>
+    </template>
+
+    <template id="notification-template">
+      <article class="notification-card">
+        <div>
+          <p class="notification-type"></p>
+          <h3 class="notification-text"></h3>
+        </div>
+        <span class="notification-date"></span>
+      </article>
+    </template>
+
+    <template id="roadmap-template">
+      <article class="roadmap-card">
+        <span class="roadmap-phase"></span>
+        <div>
+          <h4 class="roadmap-title"></h4>
+          <p class="roadmap-copy"></p>
+        </div>
+      </article>
+    </template>
+
+    <template id="donation-template">
+      <article class="donation-card">
+        <div>
+          <h3 class="donation-name"></h3>
+          <p class="donation-meta"></p>
+        </div>
+        <strong class="donation-amount"></strong>
+      </article>
+    </template>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
