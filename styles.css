@@ -25,7 +25,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Manrope", sans-serif;
+  font-family: "Manrope", "Segoe UI", sans-serif;
   background:
     radial-gradient(circle at top left, rgba(201, 139, 58, 0.25), transparent 30%),
     radial-gradient(circle at top right, rgba(217, 109, 79, 0.15), transparent 25%),
@@ -83,7 +83,7 @@ input {
 }
 
 .brand-text {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", Georgia, serif;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -111,6 +111,7 @@ input {
 .hero-copy,
 .hero-card,
 .panel {
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   background: var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.6);
@@ -140,7 +141,7 @@ h2,
 h3,
 h4 {
   margin: 0;
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", Georgia, serif;
   line-height: 1.05;
 }
 
@@ -556,5 +557,16 @@ input:focus {
 
   h1 {
     font-size: 2.8rem;
+  }
+}
+
+@supports not ((backdrop-filter: blur(14px)) or (-webkit-backdrop-filter: blur(14px))) {
+  .hero-copy,
+  .panel {
+    background: #fff8ef;
+  }
+
+  .hero-card {
+    background: #27584f;
   }
 }
