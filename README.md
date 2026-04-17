@@ -7,6 +7,17 @@ Production-ready NGO website with:
 - File uploads for gallery images
 - Optional admin protection for uploads and published updates
 
+## The stack is:
+
+- HTML for structure
+- CSS for design
+- JavaScript for frontend interactivity
+- Node.js + Express for the backend
+- SQLite for the database
+- Multer for file uploads
+- Razorpay for payments
+- Render for deployment
+
 ## Local run
 
 1. Copy `.env.example` to `.env`
